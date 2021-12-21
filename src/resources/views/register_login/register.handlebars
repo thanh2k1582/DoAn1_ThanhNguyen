@@ -1,10 +1,13 @@
-<section class="vh-100 gradient-custom">
+{{>silderBar}}
+<div class="main-content">
+  {{>headerAdmin}}
+  <main>
+     <section class="vh-100 gradient-custom" style="position:absolute;width:100%;top:60px;left:0px">
   <div class="container py-5 h-100">
     <div class="row justify-content-center align-items-center h-100">
       <div class="col-12 col-lg-9 col-xl-7">
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Đăng ký Tài khoản</h3>
             <form method="POST" action="/register/new" id="formRegister">
 
               <div class="row">
@@ -43,20 +46,6 @@
                 <div class="col-md-6 mb-4 mt-4">
 
                   <h6 class="mb-2 pb-1">Giới tính: </h6>
-
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="inlineRadioOptions"
-                      id="femaleGender"
-                      value="option1"
-                      checked
-                      name="gioiTinh"
-                    />
-                    <label class="form-check-label" for="femaleGender">Nữ</label>
-                  </div>
-
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
@@ -64,10 +53,24 @@
                       name="inlineRadioOptions"
                       id="maleGender"
                       value="option2"
+                      checked
                       name="gioiTinh"
                     />
                     <label class="form-check-label" for="maleGender">Nam</label>
                   </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="femaleGender"
+                      value="option1"
+                      name="gioiTinh"
+                    />
+                    <label class="form-check-label" for="femaleGender">Nữ</label>
+                  </div>
+
+                  
 
                   <div class="form-check form-check-inline">
                     <input
@@ -126,6 +129,11 @@
     </div>
   </div>
 </section>
+  </main>
+</div>
+
+
+
 <script>
  $("#formRegister").validate({
     rules: {
